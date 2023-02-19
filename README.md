@@ -1,2 +1,0 @@
-# final-assignment
-Proyecto Final
