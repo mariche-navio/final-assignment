@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Llamada a hoja de estilos y descarga de la Google Font 'Poppins' detectada con Whatfontis.com como la usada en el form del enunciado de la actividad Laboratorio -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+
+    <!-- Se incluye voluntariamente el título, meta descripción, autora y favicon, para enriquecer el formulario -->
+    <title>Formulario de Mariché Navío para DesArrolladoras 2023</title>
+    <meta name="author" content="Mariché Navío Navarro" />
+    <meta name="description" content="Este es el formulario generado para la práctica final (Laboratorio) del programa de Samsung y Bejob DesArrolladoras 2023" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="caja-formulario">
+      <h1>Create Account</h1>
+      <form id="formulario">
+          <!-- No se incluye el atribution action (para indicar la dirección que recibirá la información del formulario), ni el method (tipo de envío) ni el target o enctype, ya que no se solicita en el enunciado de la actividad Laboratorio -->
+        <!-- Nombre -->
+        <div class="campos">
+          <label for="name">Nombre</label><br/>
+          <input
+            type="text"
+            class="name"
+            id="name"
+            name="name"
+            autocomplete="off"
+            pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$"
+            maxlength="50"
+            required
+          />
+          <span id="nombreErroneo" style="display: none"></span>
+        </div>
+
+        <!-- Correo electrónico -->
+        <div class="campos">
+          <label for="email">Email</label><br/>
+          <input
+            type="email"
+            class="email"
+            id="email"
+            autocomplete="off"
+            maxlength="50"
+            pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+"
+            required
+          />
+          <span id="emailErroneo"></span>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="campos">
+          <label for="password">Clave</label><br/>
+          <input
+            type="password"
+            class="password"
+            id="password"
+            autocomplete="off"
+            pattern="^.{8,}$"
+            minlength="8"
+            required
+          />
+          <span id="passwordErronea"></span>
+        </div>
+
+        <!-- Confirmación Contraseña -->
+        <div class="campos">
+          <label for="password">Confirme su clave</label><br/>
+          <input
+            type="password"
+            class="passwordConfirm"
+            id="passwordConfirm"
+            autocomplete="off"
+            pattern="^.{8,}$"
+            minlength="8"
+            required
+          />
+          <span id="passwordConfirmadaErronea"></span>
+        </div>
+        
+        <!-- Botón Enviar -->
+        <button id="botonEnviar" class="button">ENVIAR</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
